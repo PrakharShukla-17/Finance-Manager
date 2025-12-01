@@ -12,7 +12,7 @@ async function signupUser(req, res) {
 
         //checking for email duplicacy:
         const existingUser = await userModel.findOne({
-            userEmail
+            userEmail:userEmail
         })
         if (existingUser) {
             return res.status(400).json({ msg: "Email already registered" });

@@ -28,6 +28,6 @@ export const userSignupSchema = z.object({
             })
         }
     }),
-    userFirstname: z.string(),
-    userLastname: z.string()
+    userFirstName: z.string(),
+    userLastName: z.string()
 })
