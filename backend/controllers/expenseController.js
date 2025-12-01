@@ -1,4 +1,4 @@
-
+import mongoose from "mongoose";
 import {expenseModel} from "../models/expenseModel.js";
 
 export const addExpenses = async (req, res) => {
@@ -6,11 +6,11 @@ export const addExpenses = async (req, res) => {
         const { title, amount, category, date, notes } = req.body;
 
         const newExpense = await expenseModel.create({
-            userId: req.user.id, // comes from middleware
+            userId: new mongoose.Types.ObjectId(req.user.id),
             title,
             amount,
             category,
-            date: date || Date.now(),
+            date: date ? new Date(date) : new Date(),
             notes
         });
 
