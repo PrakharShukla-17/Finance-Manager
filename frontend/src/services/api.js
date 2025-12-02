@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://finance-manager-0fv5.onrender.com", // backend root
+  baseURL: "https://finance-manager-1-e1lo.onrender.com", // backend root
 });
 
 // Attach token automatically if logged-in
