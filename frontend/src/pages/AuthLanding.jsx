@@ -1,34 +1,44 @@
 import { useNavigate } from "react-router-dom";
 import "./AuthLanding.css";
-import bgVideo from "../assets/landing.mp4"; // rename based on actual file name
+import bgVideo from "../assets/landing2.mp4";
 
 export default function AuthLanding() {
-  const nav = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="auth-wrapper">
 
-      {/* LEFT VIDEO SECTION */}
+      {/* LEFT — VIDEO BACKGROUND */}
       <div className="auth-left">
         <video className="auth-video" autoPlay loop muted playsInline>
           <source src={bgVideo} type="video/mp4" />
         </video>
 
         <div className="auth-overlay">
-          <div className="auth-logo fade-in">FINARY</div>
+          <div className="auth-logo fade-in">
+            FI<span>NARY</span>
+          </div>
         </div>
       </div>
 
-      {/* RIGHT SIDE CONTENT */}
+      {/* RIGHT — CTA CONTENT */}
       <div className="auth-right">
         <div className="auth-content slide-up">
-          <h2>Your finances, simplified.</h2>
+          <h2 className="tagline">Cause your money should be your finary priority.</h2>
 
-          <button className="btn primary" onClick={() => nav("/login")}>
+          <button 
+            className="btn primary"
+            type="button"
+            onClick={() => navigate("/login")}
+          >
             Login
           </button>
 
-          <button className="btn secondary" onClick={() => nav("/signup")}>
+          <button
+            className="btn secondary"
+            type="button"
+            onClick={() => navigate("/signup")}
+          >
             Create Account
           </button>
         </div>

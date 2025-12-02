@@ -1,12 +1,9 @@
-.layout-container {
+.layout {
   display: flex;
-  height: 100vh;
-  width: 100%;
 }
 
 .content {
-  flex: 1;
-  margin-left: 220px; /* Width of sidebar */
+  margin-left: 240px; /* Matches sidebar width */
   padding: 30px;
-  overflow-y: auto;
+  width: calc(100% - 240px);
 }

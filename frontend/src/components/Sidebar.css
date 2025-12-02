@@ -1,19 +1,21 @@
 .sidebar {
-  width: 220px;
-  height: 100vh;
-  background: #fff;
-  padding: 30px 20px;
-  border-right: 1px solid var(--border);
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #111;
+  padding: 30px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: bold;
   margin-bottom: 40px;
-  color: var(--primary);
+  color: #4f8ff7;
 }
 
 nav {
@@ -24,16 +26,29 @@ nav {
 
 .link {
   text-decoration: none;
-  color: var(--text-light);
-  font-size: 1rem;
-  transition: 0.2s ease;
+  font-size: 16px;
+  color: #ccc;
+  transition: 0.2s;
 }
 
-.link:hover {
-  color: var(--primary);
-}
-
+.link:hover,
 .link.active {
-  font-weight: 600;
-  color: var(--primary);
+  color: #4f8ff7;
+  transform: translateX(5px);
+}
+
+/* Logout button style */
+.logout-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  font-size: 16px;
+  color: #ff4d4d;
+}
+
+.logout-link:hover {
+  color: #ff7777;
+  transform: translateX(5px);
 }
