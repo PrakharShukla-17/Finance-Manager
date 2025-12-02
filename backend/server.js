@@ -10,7 +10,7 @@ import cors from "cors";
 dotenv.config();
 
 const corsOptions = {
-  origin: 'https://your-project-name.vercel.app', // PUT YOUR VERCEL FRONTEND URL HERE
+  origin: 'finance-manager-chi-inky.vercel.app', // PUT YOUR VERCEL FRONTEND URL HERE
   methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
   credentials: true // Allow cookies/sessions (Critical if you use cookies for login)
 };
