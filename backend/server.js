@@ -9,13 +9,14 @@ import cors from "cors";
 
 dotenv.config();
 
-const corsOptions = {
-  origin: 'finance-manager-chi-inky.vercel.app', // PUT YOUR VERCEL FRONTEND URL HERE
-  methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
-  credentials: true // Allow cookies/sessions (Critical if you use cookies for login)
-};
+// const corsOptions = {
+//   origin: 'finance-manager-chi-inky.vercel.app', // PUT YOUR VERCEL FRONTEND URL HERE
+//   methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+//   credentials: true // Allow cookies/sessions (Critical if you use cookies for login)
+// };
 
-app.use(cors(corsOptions));
+// Allow EVERYTHING
+app.use(cors());
 app.use(express.json());
 
 
