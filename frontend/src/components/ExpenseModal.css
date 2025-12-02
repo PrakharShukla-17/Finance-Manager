@@ -1,0 +1,107 @@
+/* ---------- Modal Overlay ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 500;
+}
+
+/* ---------- Modal Box ---------- */
+.modal-box {
+  background: white;
+  width: 420px;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.10);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-box h2 {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+/* ---------- Form ---------- */
+.modal-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-box input,
+.modal-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.15s;
+  font-family: "Inter", sans-serif;
+}
+
+.modal-box input:focus,
+.modal-box textarea:focus {
+  border-color: #4a8cff;
+}
+
+textarea {
+  min-height: 70px;
+  resize: none;
+}
+
+/* ---------- Bottom Buttons ---------- */
+.modal-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancel-btn {
+  background: #d6d6d6;
+  color: #222;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cancel-btn:hover {
+  background: #bfbfbf;
+}
+
+.submit-btn {
+  background: #4a8cff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #3b73d6;
+}
+
+
+/* ---------- Animation ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
