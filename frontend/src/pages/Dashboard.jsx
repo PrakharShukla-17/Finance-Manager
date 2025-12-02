@@ -135,11 +135,11 @@ export default function Dashboard() {
 
       {/* Coming Soon Message */}
       <div className="coming-soon">
-        <img src="/mobile.svg" className="coming-icon" alt="mobile" />
+        {/* <img src="/mobile.svg" className="coming-icon" alt="mobile" /> */}
         <div>
           <h3>Mobile App</h3>
           <p>
-            Track spending on the go. <br /> Coming soon to iOS & Android.
+            Track spending on the go. <br /> Coming soon.
           </p>
         </div>
       </div>
