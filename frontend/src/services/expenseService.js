@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:3000/api/expense";
+const API = "https://finance-manager-0fv5.onrender.com";
 
 export const getExpenses = async () => {
   try {
