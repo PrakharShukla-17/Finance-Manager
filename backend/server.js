@@ -5,14 +5,14 @@ import dbConnect from "./config/db.js"
 import expenseRouter from "./routes/expense.js";
 import analyticsRouter from "./routes/analytics.js";
 import dotenv from "dotenv"
-// import cors from "cors";
+import cors from "cors";
 
 dotenv.config();
 
-// app.use(cors({
-//   origin: "http://localhost:5173",
-//   credentials: true,
-// }));
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true,
+}));
 app.use(express.json());
 
 
