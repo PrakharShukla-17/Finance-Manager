@@ -9,10 +9,13 @@ import cors from "cors";
 
 dotenv.config();
 
-app.use(cors({
-  origin: "finance-manager-chi-inky.vercel.app",
-  credentials: true,
-}));
+const corsOptions = {
+  origin: 'https://your-project-name.vercel.app', // PUT YOUR VERCEL FRONTEND URL HERE
+  methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
+  credentials: true // Allow cookies/sessions (Critical if you use cookies for login)
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 
