@@ -9,13 +9,18 @@ import cors from "cors";
 
 dotenv.config();
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "finance-manager-fawn.vercel.app"
-  ],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "finance-manager-fawn.vercel.app"   // your real vercel URL
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "token", "Authorization"],
+    credentials: true,
+  })
+);
+
 
 app.use(express.json());
 
