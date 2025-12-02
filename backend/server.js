@@ -10,7 +10,7 @@ import cors from "cors";
 dotenv.config();
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "finance-manager-chi-inky.vercel.app",
   credentials: true,
 }));
 app.use(express.json());
